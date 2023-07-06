@@ -1,0 +1,21 @@
+<h1>Pdf - reorder con griglia</h1>
+
+<div class="example-container" cdkDropListGroup>
+  <div class="item-container" cdkDropListGroup>
+    <div
+      cdkDropList
+      (cdkDropListDropped)="dropListDropped()"
+      (cdkDropListEntered)="cdkDropListEntered($event)"></div>
+    <div
+      cdkDropList
+      *ngFor="let thumbnail of thumbnails; trackBy: itemTrackBy; let i = index"
+      (cdkDropListDropped)="dropListDropped()"
+      (cdkDropListEntered)="cdkDropListEntered($event)">
+      <div cdkDrag class="example-box">
+        <img class="page-thumbnail" src='data:image/png;base64, {{thumbnail.base64ByteArray}}' width="80px" />
+        <br/>
+        <div class="page-descriprion">pag.i {{thumbnail.idPage+1}} -> pag.f {{(i+1)}}</div>
+      </div>
+    </div>
+  </div>
+</div>
