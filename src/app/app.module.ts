@@ -11,7 +11,7 @@ import { ServiceModules } from 'src/lib/models/services/service.module';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { PdfReorderGridComponent } from './components/pdf-reorder-grid/pdf-reorder-grid.component';
-
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { PdfReorderGridComponent } from './components/pdf-reorder-grid/pdf-reord
     CommonModule,
     DragDropModule,
     ServiceModules,
-    PdfViewerModule
+    PdfViewerModule,
+    MatTabsModule
   ],
   providers: [PdfOperationsService],
   bootstrap: [AppComponent]
