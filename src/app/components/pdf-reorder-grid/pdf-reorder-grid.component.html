@@ -12,9 +12,11 @@
       (cdkDropListDropped)="dropListDropped()"
       (cdkDropListEntered)="cdkDropListEntered($event)">
       <div cdkDrag class="example-box">
-        <img class="page-thumbnail" src='data:image/png;base64, {{thumbnail.base64ByteArray}}' width="80px" />
+        <img class="page-thumbnail" src='data:image/png;base64, {{thumbnail.base64ByteArray}}' width="100px" />
         <br/>
-        <div class="page-descriprion">pag.i {{thumbnail.idPage+1}} -> pag.f {{(i+1)}}</div>
+        <!--
+          <div class="page-descriprion">pag.i {{thumbnail.idPage+1}} -> pag.f {{(i+1)}}</div>
+        -->
       </div>
     </div>
   </div>

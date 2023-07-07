@@ -9,3 +9,12 @@ export class PageSwitch {
   }
 
 }
+
+export class PageNumber {
+  index: number;
+
+  constructor(index: number) {
+    this.index = index;
+  }
+
+}

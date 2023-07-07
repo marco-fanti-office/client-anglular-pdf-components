@@ -12,11 +12,13 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { PdfReorderGridComponent } from './components/pdf-reorder-grid/pdf-reorder-grid.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { PdfPageSplitterComponent } from './components/pdf-page-splitter/pdf-page-splitter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PdfReorderGridComponent
+    PdfReorderGridComponent,
+    PdfPageSplitterComponent
   ],
   imports: [
     BrowserModule,

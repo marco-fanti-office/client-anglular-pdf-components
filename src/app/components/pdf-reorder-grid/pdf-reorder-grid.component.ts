@@ -134,34 +134,6 @@ export class PdfReorderGridComponent implements OnInit, AfterViewInit {
       );
     });
   }
-}
-
-function __indexOf(collection, node) {
-  return Array.prototype.indexOf.call(collection, node);
-}
-
-/*
-export class PdfReorderGridComponent implements OnInit {
-
-  constructor(private readonly _pdfService: PdfOperationsService) {}
-
-  thumbnails : Array<Thumbnail> = [];
-  confirmDisabled = true;
-
-  ngOnInit(): void {
-    this._pdfService.createThumbnails().subscribe(thmb => {
-      thmb.forEach(element => {
-        console.log(element);
-        this.thumbnails.push(element);
-      });
-    })
-  }
-
-  drop(event: CdkDragDrop<string[]>) {
-    this.confirmDisabled= false;
-    moveItemInArray(this.thumbnails, event.previousIndex, event.currentIndex);
-    console.log("reorder PDF" + event.previousIndex + "," + event.currentIndex);
-  }
 
   confirmChanges() {
     console.log("confirm changes");
@@ -179,4 +151,8 @@ export class PdfReorderGridComponent implements OnInit {
   }
 
 }
-*/
+
+function __indexOf(collection, node) {
+  return Array.prototype.indexOf.call(collection, node);
+}
+
