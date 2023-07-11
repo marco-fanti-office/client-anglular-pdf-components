@@ -13,12 +13,18 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { PdfReorderGridComponent } from './components/pdf-reorder-grid/pdf-reorder-grid.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { PdfPageSplitterComponent } from './components/pdf-page-splitter/pdf-page-splitter.component';
+import { PdfThumbToPageViewerComponent } from './components/pdf-thumb-to-page-viewer/pdf-thumb-to-page-viewer.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     PdfReorderGridComponent,
-    PdfPageSplitterComponent
+    PdfPageSplitterComponent,
+    PdfThumbToPageViewerComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,13 @@ import { PdfPageSplitterComponent } from './components/pdf-page-splitter/pdf-pag
     DragDropModule,
     ServiceModules,
     PdfViewerModule,
-    MatTabsModule
+    MatTabsModule,
+
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [PdfOperationsService],
   bootstrap: [AppComponent]

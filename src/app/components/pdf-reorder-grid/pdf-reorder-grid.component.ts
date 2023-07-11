@@ -33,12 +33,18 @@ export class PdfReorderGridComponent implements OnInit, AfterViewInit {
   constructor(private readonly _pdfService: PdfOperationsService) {}
   thumbnails : Array<Thumbnail> = [];
 
+  public errorMessage:string;
+
   ngOnInit(): void {
-    this._pdfService.createThumbnails().subscribe(thmb => {
-      thmb.forEach(element => {
-        this.thumbnails.push(element);
-      });
-    })
+    try {
+      this._pdfService.createThumbnails().subscribe(thmb => {
+        thmb.forEach(element => {
+          this.thumbnails.push(element);
+        });
+      })
+    } catch (error) {
+      this.errorMessage = 'Impossibile caricare i thumbnails';
+    }
   }
 
   ngAfterViewInit() {
